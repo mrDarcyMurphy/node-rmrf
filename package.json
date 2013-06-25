@@ -1,0 +1,16 @@
+{
+  "name": "rmrf",
+  "version": "0.0.0",
+  "description": "slim and synchronous `rm -rf` for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrDarcyMurphy/node-rmrf.git"
+  },
+  "author": "Mr. Darcy Murphy",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
