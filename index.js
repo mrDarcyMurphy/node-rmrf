@@ -1,6 +1,6 @@
 var fs = require('fs')
 
-module.exports = function(dirPath) {
+var rmrf = module.exports = function(dirPath) {
   var files = fs.readdirSync(dirPath)
   if (files.length > 0)
     for (var i = 0; i < files.length; i++) {
@@ -8,7 +8,7 @@ module.exports = function(dirPath) {
       if (fs.statSync(filePath).isFile())
         fs.unlinkSync(filePath)
       else
-        rmdir(filePath)
+        rmrf(filePath)
     }
   fs.rmdirSync(dirPath)
 }
