@@ -12,5 +12,8 @@
   },
   "author": "Mr. Darcy Murphy",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  }
 }
