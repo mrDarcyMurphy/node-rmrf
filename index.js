@@ -1,10 +1,9 @@
 var fs = require('fs')
 
 var rmrf = module.exports = function(dirPath) {
-  var files
-  try { files = fs.readdirSync(dirPath) } catch(e) {}
-  if (files) {
-    if (files.length > 0)
+  if (fs.existsSync(dirPath)) {
+    var files = fs.readdirSync(dirPath)
+    if (files && files.length > 0) {
       for (var i = 0; i < files.length; i++) {
         var filePath = dirPath + '/' + files[i]
         if (fs.statSync(filePath).isFile())
@@ -12,6 +11,7 @@ var rmrf = module.exports = function(dirPath) {
         else
           rmrf(filePath)
       }
+    }
     fs.rmdirSync(dirPath)
   }
 }
