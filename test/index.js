@@ -3,12 +3,12 @@ var fs = require('fs')
 var assert = require('assert')
 var existingPath = __dirname + '/exists'
 
-before(function(){
-  try { fs.readdirSync(__dirname + '/exists') } catch(e){
-    fs.mkdirSync(__dirname + '/exists')
-    fs.mkdirSync(__dirname + '/exists/nested')
-  }
-})
+// not bothering with 'before' as it was unreliable
+if (!fs.existsSync(__dirname + '/exists')) {
+  fs.mkdirSync(__dirname + '/exists')
+  fs.mkdirSync(__dirname + '/exists/nested')
+  fs.openSync( __dirname + '/exists/nested/empty.txt', 'w')
+}
 
 describe('rmrf', function(){
   describe('when target is missing', function(){
