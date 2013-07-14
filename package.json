@@ -1,7 +1,7 @@
 {
   "name": "rmrf",
-  "version": "1.0.1",
-  "description": "slim and synchronous `rm -rf` for node",
+  "version": "1.0.2",
+  "description": "No BS synchronous `rm -rf` for node.js",
   "main": "index.js",
   "scripts": {
     "test": "mocha test index.js"
