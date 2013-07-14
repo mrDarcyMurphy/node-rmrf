@@ -1,4 +1,4 @@
 node-rmrf
 =========
 
-slim and synchronous `rm -rf` for node
+No BS synchronous `rm -rf` for [node.js](http://nodejs.org/).
