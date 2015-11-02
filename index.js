@@ -6,10 +6,10 @@ var rmrf = module.exports = function(dirPath) {
     if (files && files.length > 0) {
       for (var i = 0; i < files.length; i++) {
         var filePath = dirPath + '/' + files[i]
-        if (fs.statSync(filePath).isFile())
-          fs.unlinkSync(filePath)
-        else
+        if (fs.lstatSync(filePath).isDirectory())
           rmrf(filePath)
+        else
+          fs.unlinkSync(filePath)
       }
     }
     fs.rmdirSync(dirPath)
