@@ -15,6 +15,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^8.2.1"
   }
 }
